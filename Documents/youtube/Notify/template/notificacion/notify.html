@@ -1,0 +1,121 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block contenido %}
+	
+<div class="div_main_notify">
+	<div class="header_notify">
+		<a href="{% url 'home' %}"> <img src="{% static 'img/flechas-izquierda.png' %}"> </a><h3>Tus Notificaciones</h3>
+	</div>
+
+	<div class="Div_notificaciones">
+		
+		{% for notify in notify %}
+			<div class="div_per_notify">
+				<div class="div_img">
+					<img src="{% static 'img/user.png' %}">
+				</div>
+				<div class="div_notify_text">
+					<p>
+					{{notify.actor}} {{notify.verbo}}
+					</p>
+				</div>
+				<div class="div_notify_time">
+					<p>hace {{ notify.timestamp }}</p>
+				</div>
+			</div>
+		{% endfor %}
+
+	</div>
+
+</div>
+
+<style>
+	
+	.div_main_notify{
+		padding-top: 3.5em;
+		padding-left: 1em;
+		padding-right: 1em;
+		padding-bottom: 3.5em;
+
+		overflow: auto;
+		height: 100%;
+	}
+
+	.header_notify{
+		text-align: center;
+		padding: 0.5em 0.5em;
+		position: relative;
+		margin-bottom: 0.5em;
+	}
+
+
+
+	.header_notify img{
+		height: 15px;
+		position: absolute;
+		left: 0%;
+		top: 50%;
+		transform: translateY(-50%);
+	}
+
+	.header_notify h3{
+		margin-left: 17px;
+		margin-top: 0;
+		margin-bottom: 0;
+		margin-right: 0;
+		font-size: 1.2em;
+		text-align: left;
+	}
+
+
+	.Div_notificaciones{
+		background: #fff;
+		margin: 0 -0.5em;
+		padding: 0.5em 0.5em 1.5em 0.5em;
+		position: relative;
+	}
+
+	.Div_notificaciones p{
+		font-size: 0.9em;
+		margin: 0;
+		display: block;
+		height: fit-content;
+
+	}
+	.Div_notificaciones h5{
+		font-size: 1.1em;
+		margin-bottom: 0.2em;
+	}
+
+	.Div_notificaciones > div{
+		display: flex;
+		align-items: center;
+		margin-bottom: 0.5em;
+	}
+
+	.div_img{
+		width: 5%;
+	}
+
+	.div_notify_text {
+		width: 50%;
+	}
+	.div_notify_time{
+		width: 20%;
+	}
+
+	.div_per_notify {
+		cursor: pointer;
+		border-bottom: 1px solid #e6e6e6;
+		margin-bottom: 10px;
+	}
+	.div_per_notify:hover{
+		background: #fafafa;
+		transition: all .3;
+	}
+
+
+</style>
+
+{% endblock %}

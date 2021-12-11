@@ -1,0 +1,103 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Notificaciones</title>
+</head>
+<body>
+
+	<div class="contenido">
+
+		{% include 'header.html' %}
+
+		{% block contenido %}
+
+		{% endblock %}
+
+		<div class="sub_nav">
+			<div class="div_one">
+				<h1>
+					Aprender Django 2022.
+				</h1>
+				<h2>
+					Crear un Gestor de Notificaciones con <span>Python - Django.</span>
+				</h2>
+				
+			</div>
+
+			<div class="div_two">
+				<img src="{% static 'img/logo.jpg' %}" style="width: 90%; margin-top: 80px;">
+			</div>
+		</div>
+
+	</div>
+
+	<style>
+		
+		@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+		a, p, h1, h2, h3, h4, h5{
+			font-family: 'Roboto', sans-serif;
+		}
+
+		h1 {
+			margin: 0;
+    		font-family: "PlusJakartaSans-ExtraBold",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+    		font-size: clamp(2.625rem, 1.2857rem + 3.5714vw, 4rem);
+    		font-weight: 800;
+    		line-height: 1.1142857142857143;
+    		color: #0A1929;
+    		margin-top: 20px;
+    		margin-bottom: 20px;
+    		max-width: 600px;
+		}
+
+		h2 {
+			margin: 0;
+    		font-family: "PlusJakartaSans-ExtraBold",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+    		font-size: clamp(1.5rem, 0.9643rem + 1.4286vw, 2.25rem);
+    		font-weight: 500;
+    		line-height: 1.2222222222222223;
+    		color: #132F4C;
+    		margin-top: 10px;
+    		margin-bottom: 10px;
+    		max-width: 550px;
+		}
+
+		span {
+    		background: linear-gradient(to right, #007FFF, #0059B2);
+    		-webkit-background-clip: text;
+    		-webkit-text-fill-color: transparent;
+		}
+
+		.contenido{
+			width: 90%;
+			position: relative;
+			margin: auto;
+			background: #f3f6f9;
+		}
+
+		.sub_nav {
+			width: 90%;
+			height: 100vh;
+			margin: auto;
+			background: #f3f6f9;
+			display: flex;
+		}
+
+		.div_one {
+			margin-top: 70px;
+			margin-left: 70px;
+			width: 60%;
+		}
+		.div_two {
+			margin: 10px;
+			width: 35%;
+		}
+
+
+	</style>
+
+</body>
+</html>

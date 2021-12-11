@@ -1,0 +1,80 @@
+{% load static %}
+
+{% load notificaciones_tags %}
+{% notificaciones as notify %}
+
+<nav class="header">
+	
+	<a href="{% url 'home' %}">
+		Dev Django
+	</a>
+
+	<div class="nav_items">
+		<a href="{% url 'notify' %}">
+			<img src="{% static 'img/alarm.png' %}">
+		</a>
+		<button class="count">
+			{{ notify }}
+		</button>
+
+		<a href="">
+			<img src="{% static 'img/user.png' %}">
+		</a>
+		
+	</div>
+</nav>
+
+
+	<style>
+		
+		.header{
+			width: 100%;
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			padding: 0.5em 0;
+		
+			background: #007fff;
+		}
+		.header a {
+			text-decoration: none;
+			color: #fff;
+			font-weight: bold;
+			margin-left: 10px;
+		}
+
+		.header img{
+			width: 25px;
+		}
+
+		.nav_items {
+			position: relative;
+		}
+
+		.count{
+
+			margin-right: 10px;
+			display: flex;
+			line-height: 1;
+			align-items: center;
+			position: absolute;
+			height: 20px;
+			width: 20px;
+			font-size: 10px;
+			text-align: center;
+			vertical-align: middle;
+			left: 1%;
+			top: -10px;
+			transform: translateY(-1%);
+			background: #9c27b0;
+			border-radius: 50%;
+			border: none;
+			color: #fff;
+			font-weight: 500;
+		}
+
+
+
+	</style>
+
+</div>
