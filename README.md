@@ -13,6 +13,17 @@ Aprende a crear un gestor de notificaciones con **Django-Python**
 
 [<img align="left" alt="Jorgito Code | Facebook" width="22px" src="https://camo.githubusercontent.com/c80f9763ed06d4ab9fbcc1a74b8b74cd95e4c7f82d3f1f70233994f236a0faeb/68747470733a2f2f63646e2e6a7364656c6976722e6e65742f6e706d2f73696d706c652d69636f6e734076332f69636f6e732f696e7374616772616d2e737667" />][facebook]
 
+Las notificaciones son simplemente eventos que se disparan cuando se realiza una accion en nuestra aplicacion, ya sea dar un like a una imagen, comentar un articulo o compartirlo, nuestro gestor esta categorizado por los siguientes elementos:
+
+* Actor: Usuario quien realiza la accion dentro de nuestra app. eg. dar like a una img
+* Verbo: Descripcion de la notificacion. eg. "like en tu imagen"
+* level: un etiqueta para identificar si la notificacion es de info, success, wrong.
+
+### Requirimientos
+
+* Python 3.5, 3.6, 3.7, 3.8
+* Django 2.2, 3.0
+
 
 
 
